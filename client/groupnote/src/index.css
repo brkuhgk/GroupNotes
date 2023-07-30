@@ -1,0 +1,142 @@
+/* TextEditor.css */
+
+/* Page background color */
+body {
+  background-color: #f9f9f9;
+}
+
+/* Page content padding and max width */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Style the container to control the size of the editor and add a box shadow */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Style the Quill toolbar and add a shaded line between tools */
+.ql-toolbar {
+  background-color: #f0f5ff; /* Sky blue color */
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add spacing between toolbar and editor */
+}
+
+.ql-toolbar button {
+  font-size: 14px;
+  padding: 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  transition: background-color 0.2s ease;
+  position: relative; /* Enable relative positioning */
+}
+
+.ql-toolbar button:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px; /* Adjust this value for the line thickness */
+  height: 50%; /* Adjust this value for the line length */
+  background-color: rgba(0, 0, 0, 0.1); /* Shaded line color */
+  transform: translateY(-50%);
+}
+
+.ql-toolbar button:first-child:before {
+  display: none; /* Hide the line for the first button */
+}
+
+.ql-toolbar button:hover {
+  background-color: #cce2ff; /* Lighter sky blue color on hover */
+}
+
+/* Style the Quill editor area */
+.ql-editor {
+  min-height: 300px; /* Minimum height for the editor */
+  height: 100%; /* Allow the editor to expand to fill the container vertically */
+  border: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 10px;
+  overflow-y: auto; /* Enable vertical scroll when content overflows */
+
+  /* Set the aspect ratio to resemble A4 size */
+  aspect-ratio: 210 / 297;
+
+  /* Add styling to give the editor a "page-like" feel */
+  background-color: #f9f9f9;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+
+  /* Additional colorful styles */
+  color: #333;
+}
+
+/* Add color to headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  color: #2e64e5; /* Blue color for headings */
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Add color to paragraphs */
+p {
+  margin: 0;
+  color: #333; /* Default text color */
+}
+
+/* Add colorful styles to specific elements */
+a {
+  color: #2e64e5; /* Blue color for links */
+}
+
+blockquote {
+  border-left: 4px solid #2e64e5; /* Blue border for blockquotes */
+  padding-left: 10px;
+  margin-left: 0;
+}
+
+/* Responsive sizing for different screen sizes */
+@media (max-width: 768px) {
+  /* On smaller screens, reduce padding to optimize space */
+  .container {
+    padding: 10px;
+  }
+
+  /* Adjust the aspect ratio for smaller screens */
+  .ql-editor {
+    aspect-ratio: unset;
+    min-height: 150px; /* Adjust minimum height for smaller screens */
+  }
+}
