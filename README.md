@@ -2,6 +2,8 @@
 
 Group Note is a collaborative note-taking application that allows teams and groups to work together in real-time on shared notes. With Group Note, capturing ideas and collaborating seamlessly becomes a breeze.
 
+[Watch the App in Action](https://www.youtube.com/watch?v=IKYB2NRoTNc)
+
 ## Table of Contents
 
 - [Overview](#overview)
